@@ -3,7 +3,7 @@ import joshuaPortrait from './assets/Joshua2.jpg'
 import joshuaEditorial from './assets/Joshua3.jpeg'
 import './App.css'
 
-type BookingType = 'intro' | 'consultation' | 'contact' | null
+type BookingType = 'intro' | 'consultation' | null
 
 const bookingLinks = {
   intro: '',
@@ -95,7 +95,7 @@ function App() {
   }, [bookingType, menuOpen])
 
   const openBooking = (type: Exclude<BookingType, null>) => {
-    const link = type === 'contact' ? '' : bookingLinks[type]
+    const link = bookingLinks[type]
     if (link) {
       window.open(link, '_blank', 'noopener,noreferrer')
       return
@@ -232,7 +232,7 @@ function App() {
               </div>
             ))}
           </div>
-          <p className="gallery-note">Hover to pause · More moments coming soon</p>
+          {/* <p className="gallery-note">Hover to pause · More moments coming soon</p> */}
         </section>
 
         <section className="pillars section" id="impact">
@@ -321,7 +321,7 @@ function App() {
             <h2>Looking for a thoughtful voice on education, opportunity, or youth development?</h2>
             <div>
               <p>Invite Joshua to speak, facilitate a conversation, or collaborate on an initiative that equips young people to thrive.</p>
-              <button className="button button-orange" type="button" onClick={() => openBooking('contact')}>Make an enquiry</button>
+              <a className="button button-orange" href="mailto:joshor13@gmail.com?subject=Speaking%20or%20partnership%20enquiry">Make an enquiry</a>
             </div>
           </div>
         </section>
@@ -333,7 +333,7 @@ function App() {
         <div className="footer-links">
           <a href="https://www.linkedin.com/in/joshuaioroge/" target="_blank" rel="noreferrer">LinkedIn</a>
           <a href="https://www.instagram.com/imole_yeshua/" target="_blank" rel="noreferrer">Instagram</a>
-          <button type="button" onClick={() => openBooking('contact')}>Email</button>
+          <a href="mailto:joshor13@gmail.com">Email</a>
         </div>
         <p className="copyright">© {new Date().getFullYear()} Joshua Oroge</p>
       </footer>
@@ -343,7 +343,7 @@ function App() {
           <section className="booking-modal" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title" onMouseDown={(event) => event.stopPropagation()}>
             <button autoFocus className="modal-close" type="button" onClick={() => setBookingType(null)} aria-label="Close booking dialog">Close</button>
             <p className="section-label">i dey wait for link</p>
-            <h2 id="booking-modal-title">{bookingType === 'intro' ? 'Free 15-minute call' : bookingType === 'consultation' ? 'Strategy consultation' : 'Contact Joshua'}</h2>
+            <h2 id="booking-modal-title">{bookingType === 'intro' ? 'Free 15-minute call' : 'Strategy consultation'}</h2>
             <p>i dey wait for link</p>
             <button className="button button-dark" type="button" onClick={() => setBookingType(null)}>Got it</button>
           </section>
