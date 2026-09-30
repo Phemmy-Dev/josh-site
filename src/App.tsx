@@ -321,7 +321,7 @@ function App() {
             <h2>Looking for a thoughtful voice on education, opportunity, or youth development?</h2>
             <div>
               <p>Invite Joshua to speak, facilitate a conversation, or collaborate on an initiative that equips young people to thrive.</p>
-              <a className="button button-orange" href="mailto:joshor13@gmail.com?subject=Speaking%20or%20partnership%20enquiry">Make an enquiry</a>
+              <a className="button button-orange" href="mailto:joshuaoroge13@gmail.com?subject=Speaking%20or%20partnership%20enquiry">Make an enquiry</a>
             </div>
           </div>
         </section>
@@ -333,7 +333,7 @@ function App() {
         <div className="footer-links">
           <a href="https://www.linkedin.com/in/joshuaioroge/" target="_blank" rel="noreferrer">LinkedIn</a>
           <a href="https://www.instagram.com/imole_yeshua/" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="mailto:joshor13@gmail.com">Email</a>
+          <a href="mailto:joshuaoroge13@gmail.com">Email</a>
         </div>
         <p className="copyright">© {new Date().getFullYear()} Joshua Oroge</p>
       </footer>
