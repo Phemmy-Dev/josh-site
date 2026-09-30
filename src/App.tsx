@@ -157,7 +157,7 @@ function App() {
 
         <section className="manifesto" aria-label="Joshua's mission">
           <p className="section-label">The mission</p>
-          <p className="manifesto-copy">His work is rooted in a simple belief: every young person deserves the tools, exposure, and support to become who they were created to be.</p>
+          <p className="manifesto-copy">My work is rooted in a simple belief: every young person deserves the tools, exposure, and support to become who they were created to be.</p>
         </section>
 
         <section className="about section" id="about">
