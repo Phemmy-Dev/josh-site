@@ -54,6 +54,25 @@ const lifeFacets = [
   },
 ]
 
+const galleryRows = [
+  [
+    { image: joshuaPortrait, position: '50% 12%', tone: 'warm' },
+    { image: joshuaEditorial, position: '42% 20%', tone: 'natural' },
+    { image: joshuaPortrait, position: '50% 34%', tone: 'mono' },
+    { image: joshuaEditorial, position: '68% 16%', tone: 'warm' },
+    { image: joshuaPortrait, position: '50% 4%', tone: 'natural' },
+    { image: joshuaEditorial, position: '30% 24%', tone: 'mono' },
+  ],
+  [
+    { image: joshuaEditorial, position: '58% 8%', tone: 'mono' },
+    { image: joshuaPortrait, position: '50% 28%', tone: 'natural' },
+    { image: joshuaEditorial, position: '36% 26%', tone: 'warm' },
+    { image: joshuaPortrait, position: '50% 8%', tone: 'mono' },
+    { image: joshuaEditorial, position: '72% 18%', tone: 'natural' },
+    { image: joshuaPortrait, position: '50% 40%', tone: 'warm' },
+  ],
+]
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [bookingType, setBookingType] = useState<BookingType>(null)
@@ -189,6 +208,31 @@ function App() {
               )
             })}
           </div>
+        </section>
+
+        <section className="photo-gallery section" id="gallery" aria-labelledby="gallery-title">
+          <div className="gallery-heading">
+            <div>
+              <p className="section-label">In the frame</p>
+              <h2 id="gallery-title">Moments from<br />the journey.</h2>
+            </div>
+            <p>A moving archive of the people, places, and experiences shaping Joshua’s story.</p>
+          </div>
+
+          <div className="gallery-motion" aria-label="Joshua Oroge photo gallery">
+            {galleryRows.map((row, rowIndex) => (
+              <div className={`gallery-row gallery-row-${rowIndex + 1}`} key={rowIndex}>
+                <div className="gallery-track">
+                  {[...row, ...row].map((photo, index) => (
+                    <figure className={`gallery-card gallery-card-${photo.tone}`} key={`${rowIndex}-${index}`} aria-hidden={index >= row.length}>
+                      <img src={photo.image} alt={index < row.length ? 'Joshua Oroge' : ''} style={{ objectPosition: photo.position }} />
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="gallery-note">Hover to pause · More moments coming soon</p>
         </section>
 
         <section className="pillars section" id="impact">

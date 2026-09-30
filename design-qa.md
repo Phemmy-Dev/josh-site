@@ -62,6 +62,7 @@ The desktop hero was also inspected directly at 1440 × 1000. Joshua's name, pos
 - Background scroll lock tested.
 - Responsive desktop and mobile layouts tested.
 - Expanding life-facets gallery default state and click states tested.
+- Two-row photo marquee tested at desktop and 390 × 844 mobile sizes: rows travel in opposite directions, loop continuously, and both pause on hover. Reduced-motion preferences disable the continuous animation.
 - Production build passed.
 - ESLint passed.
 - Browser console checked: no warnings or errors.
