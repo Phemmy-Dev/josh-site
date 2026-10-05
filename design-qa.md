@@ -65,6 +65,7 @@ The desktop hero was also inspected directly at 1440 × 1000. Joshua's name, pos
 - Two-row photo marquee tested at desktop and 390 × 844 mobile sizes: rows travel in opposite directions, loop continuously, and both pause on hover. Reduced-motion preferences disable the continuous animation.
 - Hero entrance sequence tested at desktop and 390 × 844 mobile sizes: ink curtain, orange sweep, staggered title/copy reveal, and portrait uncover settle cleanly without layout shift. Reduced-motion users receive the completed static hero immediately.
 - Speaking enquiry and footer email actions resolve to `joshuaoroge13@gmail.com`; the speaking action includes a pre-filled enquiry subject.
+- Named photo assignments verified: graduation portrait → Scholar, `educator` → Educator, `enterpreneur` → Entrepreneur, `speaker` → Speaker, and `faith` → Faith. The marquee now uses the supplied Moments/event photography with no broken image assets at desktop or mobile sizes.
 - Production build passed.
 - ESLint passed.
 - Browser console checked: no warnings or errors.

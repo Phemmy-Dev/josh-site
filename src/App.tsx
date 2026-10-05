@@ -1,6 +1,27 @@
 import { useEffect, useState, type MouseEvent } from 'react'
 import joshuaPortrait from './assets/Joshua2.jpg'
 import joshuaEditorial from './assets/Joshua3.jpeg'
+import graduationPhoto from './assets/joshua-gallery/graduation.png'
+import entrepreneurPhoto from './assets/joshua-gallery/enterpreneur.jpg'
+import educatorPhoto from './assets/joshua-gallery/educator.jpg'
+import faithPhoto from './assets/joshua-gallery/faith.jpg'
+import speakerPhoto from './assets/joshua-gallery/speaker.jpeg'
+import moment1 from './assets/joshua-gallery/moments1.jpg'
+import moment2 from './assets/joshua-gallery/moments2.jpg'
+import moment4 from './assets/joshua-gallery/moments4.jpeg'
+import moment5 from './assets/joshua-gallery/moments5.jpg'
+import moment6 from './assets/joshua-gallery/moments6.jpg'
+import moment8 from './assets/joshua-gallery/moments8.jpeg'
+import moment9 from './assets/joshua-gallery/moments9.jpeg'
+import moment10 from './assets/joshua-gallery/moments10.jpg'
+import moment11 from './assets/joshua-gallery/moments11.jpg'
+import moment12 from './assets/joshua-gallery/moments12.jpg'
+import moment13 from './assets/joshua-gallery/moments13.jpeg'
+import communityMoment1 from './assets/joshua-gallery/IMG_1069.jpg'
+import communityMoment2 from './assets/joshua-gallery/IMG_1128.jpg'
+import communityMoment3 from './assets/joshua-gallery/IMG_1584.jpg'
+import communityMoment4 from './assets/joshua-gallery/IMG_2685.jpg'
+import communityMoment5 from './assets/joshua-gallery/IMG_5871.jpg'
 import './App.css'
 
 type BookingType = 'intro' | 'consultation' | null
@@ -21,55 +42,64 @@ const lifeFacets = [
     label: 'First-Class Graduate',
     title: 'Scholar',
     copy: 'A First-Class Mathematics graduate from the University of Ilorin, grounded in discipline, curiosity, and academic excellence.',
-    image: joshuaPortrait,
-    position: '50% 16%',
+    image: graduationPhoto,
+    position: '50% 18%',
   },
   {
     label: 'Educator',
     title: 'Educator',
     copy: 'Committed to making excellent learning accessible and helping students develop confidence that travels beyond the classroom.',
-    image: joshuaEditorial,
-    position: '42% 20%',
+    image: educatorPhoto,
+    position: '50% 22%',
   },
   {
     label: 'Education Entrepreneur',
     title: 'Entrepreneur',
     copy: 'Founder and CEO of The Light Tutors, building systems that connect students with quality support and young tutors with meaningful opportunity.',
-    image: joshuaEditorial,
-    position: '50% 18%',
+    image: entrepreneurPhoto,
+    position: '50% 24%',
   },
   {
     label: 'Public Speaker',
     title: 'Speaker',
     copy: 'A thoughtful voice on education, employability, leadership, and the work of preparing young people for purposeful lives.',
-    image: joshuaPortrait,
-    position: '50% 10%',
+    image: speakerPhoto,
+    position: '50% 18%',
   },
   {
     label: 'Devout Christian',
     title: 'Faith',
     copy: 'Rooted in Christian faith and expressed through discipleship, service, excellence, and active community at Citizens of Light Church.',
-    image: joshuaEditorial,
-    position: '58% 22%',
+    image: faithPhoto,
+    position: '50% 24%',
   },
 ]
 
 const galleryRows = [
   [
-    { image: joshuaPortrait, position: '50% 12%', tone: 'warm' },
-    { image: joshuaEditorial, position: '42% 20%', tone: 'natural' },
-    { image: joshuaPortrait, position: '50% 34%', tone: 'mono' },
-    { image: joshuaEditorial, position: '68% 16%', tone: 'warm' },
-    { image: joshuaPortrait, position: '50% 4%', tone: 'natural' },
-    { image: joshuaEditorial, position: '30% 24%', tone: 'mono' },
+    { image: moment1, position: '50% 32%', tone: 'warm', alt: 'Joshua at an event venue' },
+    { image: moment2, position: '50% 25%', tone: 'natural', alt: 'Joshua representing The Light Tutors' },
+    { image: moment6, position: '50% 20%', tone: 'mono', alt: 'Joshua at a career event' },
+    { image: moment8, position: '50% 38%', tone: 'warm', alt: 'Joshua speaking with guests at HireGround' },
+    { image: moment10, position: '50% 24%', tone: 'natural', alt: 'Joshua with friends outdoors' },
+    { image: moment12, position: '50% 20%', tone: 'mono', alt: 'Joshua at a leadership event' },
+    { image: moment13, position: '50% 25%', tone: 'warm', alt: 'Joshua with the HireGround team' },
+    { image: speakerPhoto, position: '50% 18%', tone: 'natural', alt: 'Joshua speaking at a lectern' },
+    { image: communityMoment1, position: '50% 20%', tone: 'mono', alt: 'Joshua at an education event' },
+    { image: communityMoment3, position: '50% 22%', tone: 'natural', alt: 'Joshua out in the community' },
+    { image: communityMoment4, position: '50% 18%', tone: 'warm', alt: 'Joshua representing The Light Tutors' },
   ],
   [
-    { image: joshuaEditorial, position: '58% 8%', tone: 'mono' },
-    { image: joshuaPortrait, position: '50% 28%', tone: 'natural' },
-    { image: joshuaEditorial, position: '36% 26%', tone: 'warm' },
-    { image: joshuaPortrait, position: '50% 8%', tone: 'mono' },
-    { image: joshuaEditorial, position: '72% 18%', tone: 'natural' },
-    { image: joshuaPortrait, position: '50% 40%', tone: 'warm' },
+    { image: moment4, position: '50% 26%', tone: 'mono', alt: 'Joshua celebrating with a lighthearted moment' },
+    { image: moment5, position: '50% 22%', tone: 'natural', alt: 'Joshua at an outdoor gathering' },
+    { image: moment9, position: '50% 38%', tone: 'warm', alt: 'Joshua and guests at HireGround' },
+    { image: moment11, position: '50% 22%', tone: 'mono', alt: 'Joshua with his university community' },
+    { image: moment1, position: '30% 30%', tone: 'warm', alt: 'Joshua at a community event' },
+    { image: moment6, position: '45% 20%', tone: 'natural', alt: 'Joshua at a public gathering' },
+    { image: moment12, position: '48% 18%', tone: 'mono', alt: 'Joshua at a conference' },
+    { image: moment13, position: '65% 24%', tone: 'natural', alt: 'Joshua and friends celebrating HireGround' },
+    { image: communityMoment2, position: '50% 20%', tone: 'warm', alt: 'Joshua at a company event' },
+    { image: communityMoment5, position: '50% 22%', tone: 'natural', alt: 'Joshua with members of his community' },
   ],
 ]
 
@@ -225,7 +255,7 @@ function App() {
                 <div className="gallery-track">
                   {[...row, ...row].map((photo, index) => (
                     <figure className={`gallery-card gallery-card-${photo.tone}`} key={`${rowIndex}-${index}`} aria-hidden={index >= row.length}>
-                      <img src={photo.image} alt={index < row.length ? 'Joshua Oroge' : ''} style={{ objectPosition: photo.position }} />
+                      <img src={photo.image} alt={index < row.length ? photo.alt : ''} style={{ objectPosition: photo.position }} />
                     </figure>
                   ))}
                 </div>
