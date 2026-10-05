@@ -32,9 +32,10 @@ const bookingLinks = {
 }
 
 const pillars = [
-  { number: '01', title: 'Education', copy: 'Building accessible learning systems that help students grow in confidence, competence, and academic performance.' },
-  { number: '02', title: 'Employability', copy: 'Helping students and recent graduates turn education into practical skills, meaningful work, and long-term opportunity.' },
-  { number: '03', title: 'Leadership', copy: 'Equipping young people to lead with clarity, character, service, and a deep sense of purpose.' },
+  { number: '01', title: 'Leadership', copy: 'Serving and equipping young people through purposeful leadership, including his work with Equipr Youth Partnership and Citizens of Light Church.' },
+  { number: '02', title: 'Business', copy: 'As Founder and CEO of The Light Tutors, Joshua is building a business that connects students with quality tutoring and creates meaningful opportunities for young tutors.' },
+  { number: '03', title: 'Entrepreneurship', copy: 'From starting The Light Tutors to shaping HireGround, Joshua turns ideas into initiatives that help young people grow and move into work.' },
+  { number: '04', title: 'Education', copy: 'A First-Class Mathematics graduate, Joshua champions excellent learning and supports students through high-quality tutoring.' },
 ]
 
 const lifeFacets = [
@@ -169,10 +170,10 @@ function App() {
       <main id="top">
         <section className="hero" aria-labelledby="hero-title">
           <div className="hero-copy">
-            <p className="eyebrow">Education entrepreneur · Speaker · Youth advocate</p>
+            <p className="eyebrow">Leadership · Business · Entrepreneurship · Education</p>
             <h1 id="hero-title"><span>Joshua</span><span>Oroge</span></h1>
             <div className="hero-summary">
-              <p>Building systems that help young people move from education to opportunity—and thrive in life.</p>
+              <p>Leading with purpose, building businesses, and creating opportunities through education.</p>
               <div className="hero-actions">
                 <button className="button button-dark" type="button" onClick={() => openBooking('intro')}>Book a free call</button>
                 <a className="text-link" href="#about">Discover his story</a>
@@ -187,7 +188,7 @@ function App() {
 
         <section className="manifesto" aria-label="Joshua's mission">
           <p className="section-label">The mission</p>
-          <p className="manifesto-copy">My work is rooted in a simple belief: every young person deserves the tools, exposure, and support to become who they were created to be.</p>
+          <p className="manifesto-copy">Across leadership, business, entrepreneurship, and education, Joshua is building systems that give young people the tools, exposure, and support to thrive.</p>
         </section>
 
         <section className="about section" id="about">
@@ -197,10 +198,10 @@ function App() {
           </div>
           <div className="about-copy">
             <p className="section-label">Meet Joshua</p>
-            <h2>An educator at heart. A builder by conviction.</h2>
+            <h2>A leader, entrepreneur, and builder of opportunity.</h2>
             <div className="body-copy">
-              <p>Joshua Oroge is an education entrepreneur, youth development advocate, and leader passionate about helping young people unlock their potential academically, professionally, and in life.</p>
-              <p>As Founder and CEO of The Light Tutors Limited, he is building a bridge between students who need excellent academic support and talented young Nigerians ready to grow, earn, and make a meaningful contribution.</p>
+              <p>Joshua Oroge is a leader, business builder, entrepreneur, and youth development advocate. His work brings these areas together to create practical opportunities for young people.</p>
+              <p>As Founder and CEO of The Light Tutors Limited, he leads an education company connecting students with quality tutoring and creating development pathways for tutors. He is also the Visionner for HireGround, a career initiative helping students and graduates prepare for work.</p>
             </div>
             <a className="text-link text-link-dark" href="#journey">Explore the journey</a>
           </div>
@@ -268,8 +269,8 @@ function App() {
         <section className="pillars section" id="impact">
           <div className="section-intro">
             <p className="section-label">Areas of impact</p>
-            <h2>Work that turns potential into progress.</h2>
-            <p>Joshua’s work sits at the intersection of learning, opportunity, and purpose.</p>
+            <h2>Four areas. One purpose.</h2>
+            <p>Explore how Joshua’s leadership, business, entrepreneurship, and education work together to create opportunity for young people.</p>
           </div>
           <div className="pillar-grid">
             {pillars.map((pillar) => (
